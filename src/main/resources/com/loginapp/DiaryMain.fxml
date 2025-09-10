@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.loginapp.DiaryMainController"
+            prefWidth="1000" prefHeight="750"
+            stylesheets="@style.css">
+    <top>
+        <VBox spacing="0">
+            <HBox alignment="CENTER_LEFT" spacing="0" style="-fx-padding: 32 48 0 48;" HBox.hgrow="ALWAYS">
+                <Label text="DIGITAL DIARY" styleClass="diary-header" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Button text="Logout" onAction="#handleLogout" styleClass="logout-button" />
+            </HBox>
+            
+            <!-- Selection Toolbar (initially hidden) -->
+            <ToolBar fx:id="selectionToolbar" style="-fx-padding: 8 48; -fx-background-color: #2D2D3D;" visible="false">
+                <items>
+                    <Label fx:id="selectionCountLabel" text="0 selected" style="-fx-text-fill: #E4E4E7; -fx-font-weight: bold; -fx-padding: 0 20 0 0;" />
+                    <Button text="Delete" onAction="#deleteSelected" styleClass="delete-button" />
+                    <Button text="Cancel" onAction="#cancelSelection" styleClass="cancel-button" />
+                </items>
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <StackPane style="-fx-padding: 0 0 0 32;">
+            <VBox alignment="TOP_CENTER" spacing="40">
+                <HBox alignment="CENTER" spacing="0">
+                    <StackPane styleClass="search-bar-card">
+                        <HBox alignment="CENTER" spacing="12" style="-fx-padding: 8 16 8 16;">
+                            <Label styleClass="search-icon" text="🔍" />
+                            <DatePicker fx:id="datePicker" styleClass="date-picker" visible="false" />
+                            <TextField fx:id="searchField" promptText="Search by name" styleClass="search-input" maxWidth="260" />
+                            <HBox spacing="0" styleClass="toggle-group">
+                                <ToggleButton fx:id="dateToggle" text="DATE" styleClass="toggle-btn" />
+                                <ToggleButton fx:id="nameToggle" text="NAME" styleClass="toggle-btn" selected="true" />
+                            </HBox>
+                        </HBox>
+                    </StackPane>
+                </HBox>
+                <AnchorPane VBox.vgrow="ALWAYS">
+                    <VBox spacing="10" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40">
+                        <ListView fx:id="entryList" styleClass="entry-list" VBox.vgrow="ALWAYS" />
+                    </VBox>
+                    <Button fx:id="fabButton" styleClass="fab-btn" onAction="#handleNewEntry" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="10">
+                        <graphic>
+                            <ImageView fitWidth="48" fitHeight="48" preserveRatio="true">
+                                <image>
+                                    <Image url="@plus.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </AnchorPane>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
