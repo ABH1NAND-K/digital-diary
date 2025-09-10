@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.loginapp.SignupController"
+            prefWidth="400" prefHeight="300"
+            style="-fx-background-color: #0b0f1a;">
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+            <Label text="Sign Up" style="-fx-text-fill: #4da6ff; -fx-font-size: 24px;"/>
+            <TextField fx:id="usernameField" promptText="Username" maxWidth="300"
+                       style="-fx-background-color: transparent; -fx-border-color: #4da6ff; -fx-text-fill: white;"/>
+            <PasswordField fx:id="passwordField" promptText="Password" maxWidth="300"
+                           style="-fx-background-color: transparent; -fx-border-color: #4da6ff; -fx-text-fill: white;"/>
+            <Button text="Sign Up" onAction="#handleSignup" maxWidth="100"
+                    style="-fx-background-color: #4da6ff; -fx-text-fill: white;"/>
+        </VBox>
+    </center>
+</BorderPane>
+

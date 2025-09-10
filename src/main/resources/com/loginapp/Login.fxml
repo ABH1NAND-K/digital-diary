@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.loginapp.LoginController"
+            prefWidth="400" prefHeight="300"
+            stylesheets="@style.css">
+    <top>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 20 10 0;">
+            <Button fx:id="topRightSignupButton" text="Sign Up" onAction="#handleSignup" styleClass="signup-button" />
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+            <StackPane alignment="CENTER">
+                <VBox fx:id="loginBox" alignment="CENTER" spacing="15" maxWidth="350" styleClass="form-box">
+                    <Label text="Login" styleClass="label-title"/>
+                    <TextField fx:id="usernameField" promptText="Username" maxWidth="300" styleClass="text-field"/>
+                    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="300" styleClass="password-field"/>
+                    <Button text="Login" onAction="#handleLogin" maxWidth="100" styleClass="button-accent"/>
+                </VBox>
+                <VBox fx:id="signupBox" alignment="CENTER" spacing="15" maxWidth="350" styleClass="form-box" visible="false" managed="false">
+                    <Label text="Sign Up" styleClass="label-title"/>
+                    <TextField fx:id="signupUsernameField" promptText="Username" maxWidth="300" styleClass="text-field"/>
+                    <PasswordField fx:id="signupPasswordField" promptText="Password" maxWidth="300" styleClass="password-field"/>
+                    <Button text="Sign Up" onAction="#handleSignupSubmit" styleClass="button-accent" style="-fx-padding: 8px 30px;"/>
+                    <Button text="Back to Login" onAction="#showLoginForm" styleClass="button-link"/>
+                </VBox>
+            </StackPane>
+        </VBox>
+    </center>
+</BorderPane>
