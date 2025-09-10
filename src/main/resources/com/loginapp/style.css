@@ -1,0 +1,505 @@
+/* style.css for Login/Signup UI */
+
+.root {
+    -fx-background-color: #282a36; /* Dark blue/grey background */
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-text-fill: #f8f8f2; /* Off-white text */
+}
+
+.form-box {
+    -fx-background-color: #2A2A3C; /* Slightly lighter gray */
+    -fx-border-color: #14B8A6; /* Soft Teal */
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 32 32 32 32;
+    -fx-effect: dropshadow(gaussian, #00000033, 10, 0.2, 0, 4);
+}
+
+.label-title {
+    -fx-text-fill: #EDEDED; /* Soft White */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field, .text-area, .text-area .content {
+    -fx-background-color: #3B3B4D; /* Darker background for text areas */
+    -fx-border-color: #14B8A6; /* Soft Teal */
+    -fx-border-radius: 6;
+    -fx-text-fill: #EDEDED; /* Soft White */
+    -fx-font-size: 16px; /* Increased from 14px */
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Style specifically for the title field */
+#titleField {
+    -fx-font-size: 18px; /* Larger font for title */
+    -fx-padding: 10px;
+}
+
+/* Style specifically for the content area */
+#contentArea, #contentArea .content {
+    -fx-font-size: 16px; /* Larger font for content */
+    -fx-padding: 15px;
+    -fx-background-color: #3B3B4D; /* Match the background */
+}
+
+.button-accent, .entry-back-btn, .entry-ok-btn {
+    -fx-background-color: #14B8A6; /* Soft Teal */
+    -fx-text-fill: #1E1E2E; /* Deep Charcoal Gray for contrast */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px; /* Increased from default */
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 8 22 8 22; /* Slightly larger padding */
+    -fx-cursor: hand;
+}
+
+/* Style the back button */
+.back-button {
+    -fx-background-color: #14B8A6;
+    -fx-background-radius: 6;
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+
+.back-button:hover {
+    -fx-background-color: #0D8A7D; /* Darker teal on hover */
+}
+
+.back-button .label {
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 24px;
+    -fx-alignment: center;
+}
+
+/* Style the back button on hover */
+.entry-back-btn:hover {
+    -fx-background-color: #0D8A7D; /* Darker teal on hover */
+}
+
+/* Date and name labels */
+.date-label, .entry-date, #dateLabel {
+    -fx-text-fill: #14B8A6; /* Teal color to match login button */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Toggle buttons */
+.toggle-btn {
+    -fx-background-color: #2A2A3C; /* Dark background for unselected */
+    -fx-text-fill: #A1A1AA; /* Light gray text for unselected */
+    -fx-font-size: 16px;
+    -fx-padding: 8 24px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 2px;
+    -fx-border-color: #14B8A6; /* Teal border */
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 1, 0.1, 0, 1);
+}
+
+.toggle-btn:selected {
+    -fx-background-color: #14B8A6; /* Teal background when selected */
+    -fx-text-fill: #1E1E2E; /* Dark text for contrast */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0.1, 0, 1);
+}
+
+.toggle-btn:hover:!selected {
+    -fx-background-color: #3B3B4D; /* Slightly lighter on hover */
+}
+
+.toggle-btn:hover:selected {
+    -fx-background-color: #0D8A7D; /* Darker teal on hover when selected */
+}
+
+/* Style the ImageView inside the back button */
+.entry-back-btn > .graphic > .image-view > .image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0.5, 0, 1);
+}
+
+.button-accent:hover, .entry-back-btn:hover, .entry-ok-btn:hover {
+    -fx-background-color: #0D8A7D; /* Darker teal on hover */
+    -fx-text-fill: #1E1E2E;
+}
+
+.button-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #A78BFA; /* Lavender for link */
+    -fx-font-size: 14px;
+    -fx-underline: true;
+}
+
+/* Style for JavaFX alerts */
+.dialog-pane {
+    -fx-background-color: #2A2A3C;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #EDEDED;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: #2A2A3C;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-text-fill: #EDEDED;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #14B8A6;
+    -fx-text-fill: #1E1E2E;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #0D8A7D;
+}
+
+/* Style for the signup button in top-right corner */
+.signup-button {
+    -fx-background-color: #14B8A6;
+    -fx-text-fill: #1E1E2E;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 20px;
+    -fx-min-width: 90px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.signup-button:hover {
+    -fx-background-color: #0D8A7D;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 4);
+}
+
+/* Style for the logout button */
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #14B8A6; /* Teal text to match other buttons */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16px;
+    -fx-cursor: hand;
+    -fx-border-color: #14B8A6; /* Teal border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.logout-button:hover {
+    -fx-background-color: rgba(167, 139, 250, 0.1); /* Slight lavender tint */
+}
+
+/* Secondary text (dates, hints) */
+.secondary-text {
+    -fx-text-fill: #A1A1AA;
+}
+
+/* Selection Mode Styles */
+.selection-toolbar {
+    -fx-background-color: #2D2D3D;
+    -fx-padding: 8 48;
+}
+
+.selection-count {
+    -fx-text-fill: #E4E4E7;
+    -fx-font-weight: bold;
+    -fx-padding: 0 16 0 0;
+}
+
+.cancel-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #A1A1AA;
+    -fx-border-color: #A1A1AA;
+    -fx-border-radius: 4;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+}
+
+.cancel-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Checkbox Styles */
+.check-box {
+    -fx-padding: 0 16 0 0;
+}
+
+.check-box .box {
+    -fx-background-color: #3B3B4D;
+    -fx-border-color: #14B8A6;
+    -fx-border-radius: 4;
+    -fx-border-width: 2;
+    -fx-min-width: 20;
+    -fx-min-height: 20;
+    -fx-background-radius: 4;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #14B8A6;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #3B3B4D;
+}
+
+/* Entry List Styling */
+.entry-list {
+    -fx-background-color: transparent;
+    -fx-padding: 8px 16px 8px 8px;
+    -fx-selection-bar: #14B8A633; /* Semi-transparent teal for selection */
+    -fx-selection-bar-non-focused: #14B8A61A; /* More transparent when not focused */
+}
+
+.entry-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 8px 0;
+    -fx-cursor: hand;
+}
+
+.entry-list .list-cell:filled:selected, 
+.entry-list .list-cell:filled:selected:focused {
+    -fx-background-color: #14B8A633; /* Semi-transparent teal for selection */
+}
+
+.entry-list .list-cell:filled:hover {
+    -fx-background-color: #14B8A61A; /* Very light teal on hover */
+}
+
+/* Delete Button Styling */
+.delete-button {
+    -fx-background-color: #FF4D4F; /* Red color for delete action */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+}
+
+.delete-button:hover {
+    -fx-background-color: #FF7875; /* Lighter red on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.1, 0, 2);
+}
+
+.delete-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+    -fx-effect: none;
+}
+
+.entry-list .list-cell:filled:hover {
+    -fx-background-color: transparent;
+}
+
+.entry-list .list-cell:empty {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.diary-entry-cell {
+    -fx-background-color: #1E1E2E;
+    -fx-background-radius: 4;
+    -fx-border-color: #3F3F3F;
+    -fx-border-radius: 4;
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+}
+
+.diary-entry-cell:hover {
+    -fx-background-color: #2A2A3A;
+    -fx-border-color: #4F4F4F;
+}
+
+.diary-entry-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E4E4E7;
+}
+
+.diary-entry-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #A1A1AA;
+}
+
+.diary-header {
+    -fx-text-fill: #EDEDED;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 0;
+}
+
+.search-bar-card {
+    -fx-background-color: #2A2A3C;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, #00000033, 2, 0.1, 0, 0);
+    -fx-padding: 0;
+}
+
+/* Entry List Styling */
+.entry-list {
+    -fx-background-color: transparent;
+    -fx-padding: 0 32px 16px 32px;
+}
+
+.entry-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 16px;
+    -fx-border-color: #3B3B4D;
+    -fx-border-width: 0 0 1px 0;
+    -fx-text-fill: #EDEDED;
+}
+
+.entry-list .list-cell:filled:selected {
+    -fx-background-color: #3B3B4D;
+    -fx-text-fill: #EDEDED;
+}
+
+.entry-list .list-cell:filled:hover {
+    -fx-background-color: #3B3B4D;
+    -fx-cursor: hand;
+}
+
+.entry-list .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.entry-list .scroll-bar:vertical .track {
+    -fx-background-color: #2A2A3C;
+    -fx-border-color: transparent;
+}
+
+.entry-list .scroll-bar:vertical .thumb {
+    -fx-background-color: #3B3B4D;
+    -fx-background-radius: 2px;
+}
+
+.entry-list .scroll-bar:vertical .increment-button,
+.entry-list .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+/* Diary Entry Cell Styling */
+.diary-entry-cell {
+    -fx-spacing: 4px;
+}
+
+.diary-entry-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EDEDED;
+}
+
+.diary-entry-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #A1A1AA;
+}
+
+.search-icon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #EDEDED;
+    -fx-label-padding: 0 8 0 0;
+}
+
+.search-input {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #14B8A6;
+    -fx-text-fill: #EDEDED;
+    -fx-font-size: 18px;
+    -fx-prompt-text-fill: #A1A1AA;
+    -fx-pref-width: 260px; /* wider search input */
+    -fx-min-width: 200px;
+    -fx-max-width: 320px;
+    -fx-alignment: center;
+}
+
+.toggle-group {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-spacing: 0;
+}
+
+.entry-list {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: center;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+}
+
+.diary-entry-cell {
+    -fx-background-color: #23233a;
+    -fx-background-radius: 16;
+    -fx-padding: 8 7 8 4;
+    -fx-spacing: 8;
+    -fx-effect: dropshadow(gaussian, #14B8A6AA, 8, 0.1, 0, 2);
+    -fx-border-color: #14B8A6;
+    -fx-border-radius: 16;
+    -fx-max-width: Infinity;
+    -fx-min-width: 0;
+    -fx-pref-width: 100%;
+    -fx-background-insets: 0 5 0 2; /* increased right inset for 3px margin effect */
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+    margin-right: 3px; /* for reference, not used by JavaFX */
+    margin-bottom: 5px; /* consistent spacing between diary entries */
+}
+
+.fab-btn {
+    -fx-background-color: #14B8A6;
+    -fx-text-fill: #1E1E2E;
+    -fx-font-size: 56px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 44;
+    -fx-min-width: 88px;
+    -fx-min-height: 88px;
+    -fx-max-width: 88px;
+    -fx-max-height: 88px;
+    -fx-effect: dropshadow(gaussian, #00000055, 8, 0.2, 0, 2);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: graphic-only;
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+    z-index: 1000;
+    /* Fix for visibility: add margin from right and bottom */
+    -fx-margin: 0 32 32 0;
+}
+
+.fab-btn:hover {
+    -fx-background-color: #0D8A7D; /* Darker teal on hover */
+    -fx-text-fill: #1E1E2E;
+}
+
+.diary-entry-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f8f8f2; /* White for better contrast */
+}
+
+.diary-entry-date {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bd93f9; /* Purple for date */
+    -fx-padding: 4px 0 12px 0;
+}
+
+.diary-entry-content {
+    -fx-font-size: 18px;
+    -fx-text-fill: #f8f8f2; /* Brighter white for content */
+    -fx-padding: 8px 0;
+    -fx-background-color: transparent;
+    -fx-wrap-text: true;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
