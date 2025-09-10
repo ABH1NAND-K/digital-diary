@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.loginapp.DiaryEntryController"
+            prefWidth="1000" prefHeight="750"
+            stylesheets="@style.css">
+    <top>
+        <HBox alignment="CENTER" style="-fx-padding: 32 48 0 48;">
+            <Button fx:id="backButton" styleClass="back-button">
+                <graphic>
+                    <Label style="-fx-text-fill: #1E1E2E; -fx-font-size: 24px;">
+                        <text>←</text>
+                    </Label>
+                </graphic>
+            </Button>
+            <Region fx:id="spacerLeft" HBox.hgrow="ALWAYS" />
+            <HBox spacing="0" styleClass="toggle-group">
+                <ToggleButton fx:id="writeToggle" text="write" styleClass="toggle-btn" />
+                <ToggleButton fx:id="viewToggle" text="view" styleClass="toggle-btn" />
+            </HBox>
+            <Region fx:id="spacerRight" HBox.hgrow="ALWAYS" />
+            <Button fx:id="okButton" styleClass="entry-ok-btn">
+                <graphic>
+                    <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                        <image>
+                            <Image url="@/com/loginapp/checkmark.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="TOP_LEFT" spacing="16" prefHeight="Infinity" maxHeight="Infinity" BorderPane.alignment="CENTER">
+            <TextField fx:id="titleField" id="titleField" promptText="Title" style="-fx-font-size: 18px; -fx-padding: 10px;" />
+            <Label fx:id="dateLabel" style="-fx-text-fill: #A0A0A0; -fx-font-size: 14px; -fx-padding: 0 0 10 5;" />
+            <TextArea fx:id="contentArea" id="contentArea" promptText="Write your diary entry here..." 
+                     style="-fx-font-size: 16px; -fx-padding: 15px; -fx-background-color: #3B3B4D;" 
+                     VBox.vgrow="ALWAYS" maxHeight="Infinity" wrapText="true" />
+        </VBox>
+    </center>
+</BorderPane>
